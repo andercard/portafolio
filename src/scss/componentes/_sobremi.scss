@@ -1,0 +1,51 @@
+.sobreMi{ 
+  @include edContainer;
+}
+
+.sobreMi__contenido {
+  @include edContainer;
+}
+
+.sobreMi__informacion {
+  @include edItem(100,55);
+  @include from(m){
+    order: 1;
+  }
+}
+
+.sobreMi__imagen{ 
+  @include edItem(100,45);
+  @include mainCenter;
+  @include crossStart;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  @include from(m){
+    order: 2;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+}
+
+.sobreMi__foto {
+  position: relative;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 6px;
+  max-width: 300px
+}
+
+.sobreMi__frase {
+  text-align: center;
+  font-size: rem(18px);
+  margin-top: 10px 0;
+}
+
+.sobreMi__redes {
+  display: flex;
+}
+
+.sobreMi__redesItem {
+  img {
+    max-width: 30px;
+  }
+}

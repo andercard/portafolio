@@ -1,0 +1,26 @@
+.contacto {
+  @include edContainer;
+}
+
+.redesSociales {
+  display: flex;
+}
+
+.redSocial {
+  margin: 0 10px;
+  &:first-of-type {
+    margin-left: 0;
+  }
+  i {
+    font-size: rem(25px);
+    color: $color2;
+    transition: color .3s;
+  }
+  @include from(m) {
+    &:hover {
+      i {
+        color: $primario;
+      }
+    }
+  }
+}

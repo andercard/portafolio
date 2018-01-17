@@ -1,0 +1,115 @@
+.proyectos {
+  @include edContainer;
+}
+
+.proyectoTarjetas {
+  @include edItem;
+  @include edContainer;
+}
+
+.proyectoTarjeta {
+  @include edItem(100,50);
+  margin-top: 20px;
+}
+
+.proyectoTarjeta__titulo {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: rem(18px);
+  margin-bottom: 10px;
+  @include from(m) {
+    font-size: rem(20px);
+  }
+}
+
+.proyectoTarjeta__informacion {
+  p {
+    margin-top: 0;
+    font-size: rem(16px);
+  }
+  a {
+    // color: $primario;
+  }
+}
+
+.btn {
+  border: 1px solid $primario;
+  padding: 8px 10px 10px 10px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all .3s;
+  @include from(m) {
+    &:hover {
+      background-color: $primario;
+      color: $color1;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.proyectoTarjeta__sliderItem {
+  position: relative;
+  cursor: pointer;
+  @include from(m) {
+    &:after {
+      content: 'Ver  Galería';
+      background-color: rgba($color4,.7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $color1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // font-weight: 700;
+      font-size: rem(22px);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.slick-arrow {
+  font-size: rem(30px);
+  color: $primario;
+}
+
+.proyectoTarjeta__sliderArrowBack,
+.proyectoTarjeta__sliderArrowForward  {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  background-color: $color1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primario;
+  font-size: rem(26px);
+  cursor: pointer;
+  transition: all .3s;
+  @include from(l){
+    &:hover {
+      background-color: $primario;
+      color: $color1;
+    }
+  }
+}
+
+.proyectoTarjeta__sliderArrowForward {
+  left: 40px;
+}

@@ -1,0 +1,84 @@
+.banner {
+  background-image: url('../images/header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative;
+  @include edContainer;
+  @include full;
+  clip-path: polygon();
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: $dgprimario;
+    
+    opacity: .7;
+  }
+  @include from(m) {
+    min-height: 500px;
+  }
+}
+
+.banner__borderBottom {
+  position: absolute;
+  z-index: 15;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  @include from(m) {
+    height: 100px;
+  }
+}
+
+.svg--lg {
+  display: none;
+  @include from(m) {
+    display: block;
+  }
+}
+
+.svg--sm {
+  @include from(m) {
+    display: none;
+  }
+}
+
+.banner__contendor {
+  @include edContainer;
+  @include flexColumn;
+  @include mainCenter;
+  // @include crossCenter;
+  position: relative;
+  z-index: 10;
+  padding: 40px 20px;
+}
+
+.banner__titulo {
+  color: $color1;
+  font-weight: 500;
+  font-family: $font2;
+  font-size: rem(38px);
+  margin: 0;
+  @include from(m) {
+    font-size: rem(70px);
+  }
+}
+
+.banner__subTitulo {
+  margin: 0;
+  font-size: rem(20px);
+  color: $color1;
+    @include from(m) {
+    font-size: rem(30px);
+  }
+}
+
+.banner__frase {
+  color: $color1;
+  font-size: rem(30px);
+}

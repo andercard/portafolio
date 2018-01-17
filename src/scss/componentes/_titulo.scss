@@ -1,0 +1,44 @@
+.descripcion__titulo {
+  h1,h2,h3,h4 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      height: 3px;
+      width: 70px;
+      background-color: $primario;
+      transition: width .3s;
+    }
+  }
+  h2 {
+    font-size: rem(24px);
+  }
+  h3 {
+    font-size: rem(22px);
+  }
+  h4 {
+    font-size: rem(18px);
+  }
+  @include from(m){
+    h1,h2,h3,h4 {
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    h2 {
+      font-size: rem(32px);
+    }
+    h3 {
+      font-size: rem(28px);
+    }
+    h4 {
+      font-size: rem(22px);
+    }
+  }
+}
