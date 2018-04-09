@@ -1,0 +1,19 @@
+{
+  "name": "Ana Gómez",
+  "short_name": "Ana Gómez",
+  "description": "Tarjeta de presentación.",
+  "background_color": "#4C4C4C",
+  "theme_color": "#4C4C4C",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./?utm=homescreen",
+  "scope": "../",
+  "lang": "es-CO",
+  "icons": [
+    {
+      "src": "./favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

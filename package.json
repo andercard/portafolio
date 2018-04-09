@@ -19,7 +19,7 @@
     "gulp-clean-css": "^3.3.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
-    "gulp-image": "^2.8.0",
+    "gulp-image": "^2.10.1",
     "gulp-js-obfuscator": "^1.0.0",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
@@ -36,7 +36,7 @@
     "ed-grid": "^2.1.6",
     "fancybox": "^3.0.0",
     "ionicons": "^3.0.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
     "retinajs": "^2.1.0",
     "slick-carousel": "^1.8.1"
   }

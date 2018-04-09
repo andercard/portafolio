@@ -10,3 +10,19 @@ $(".proyectoTarjeta__slider").slick({
   nextArrow:
     '<i class="proyectoTarjeta__sliderArrowForward ion-ios-arrow-forward"></i>'
 });
+
+if ( 'serviceWorker' in navigator ) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js')
+      .then( function(registration) {
+        console.log(
+          'Service Worker registrado con éxito',
+          registration.scope
+        )
+      })
+      .catch( function(err) { 
+        console.log('Registro de Service Worker fallo ', err)
+      } )
+  })
+
+}
